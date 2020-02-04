@@ -1,0 +1,62 @@
+p {
+    font-family: Lato;
+}
+
+form {
+    border: 1px solid #000;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+form h3 {
+    text-align: center;
+    border-bottom:3px solid;
+    padding-bottom:5px;
+    margin-bottom:-10px;
+}
+
+form div.form-item {
+    margin: 10px 0;
+}
+
+form div.form-item input[type=text] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    float: left;
+    height:40px;
+    line-height: 40px;
+    background:rgba(218, 210, 210, 0.384);
+    text-indent: 10px;
+}
+
+form div.form-item label {
+    float: left;
+    width:100%;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    padding:10px 0;
+}
+
+form div.form-item button {
+    margin: 10px 0 0 5px !important;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    text-transform: capitalize;
+    float: right !important;
+}
+
+form div.text.error {
+    color: rgba(202, 4, 4, 0.8);
+    font-size: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+    float: left;
+    width:100%;
+}

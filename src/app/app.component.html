@@ -1,0 +1,25 @@
+<form [formGroup]="dynamicFormGroup" class="flex-col" (ngSubmit)="onSubmit()">
+	<h3>{{formDefinitions.Title}}</h3>
+	<div *ngFor="let key of keys">
+
+		<div class="form-item">
+			<label [for]="getFormControlName(key)" *ngIf="isInputItem(key)">
+        {{ getItemLabel(key) }}
+      </label>
+			<input [type]="getType(key)" class="form-control" [formControlName]="getFormControlName(key)"
+        *ngIf="isInputItem(key)" [placeholder]="getItemPlaceholder(key)" />
+			<div *ngFor="let error of getFormItemValidationResult(key)" class="text error">
+				{{ error.description }}
+			</div>
+		</div>
+		<div class="form-item">
+			<button [type]="getType(key)" style="float: left;" *ngIf="isButtonItem(key)"
+        [disabled]="getType(key) == 'submit' && dynamicFormGroup.invalid">
+        {{ getItemLabel(key) }}
+      </button>
+		</div>
+	</div>
+</form>
+<p>
+	{{ resultModel }}
+</p>
